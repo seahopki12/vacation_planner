@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-      integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
     <title>Vacation Planner</title>
     <style>
-            /* Set the size of the div element that contains the map */
-            #map {
-                height: 400px;
-                /* The height is 400 pixels */
-                width: 100%;
-                /* The width is the width of the web page */
-            }
-        </style>
-  </head>
-  <body>
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 400px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
+        }
+    </style>
+</head>
+
+<body>
     <!-- first page before search -->
+
     <!-- navbar and links -->
-
     <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">Vacation Planner</li>
-        </ul>
-      </div>
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">Vacation Planner</li>
+            </ul>
+        </div>
     </div>
-    <div style="height:100%;width:100%">
-<div id="map"></div>
+    
+
+    <!-- outline -->
+    <div class="grid container">
+        <div class="grid-x">
+            <div class="cell">
+                <!-- Carousel-->
+                <p>This is where the carousel will go.</p>
+            </div>
+        </div>
+        <div class="grid-x">
+            <div class="cell medium-6">
+                <!-- Input Field-->
+                <p>This is where the search field and search button will go.</p>
+            </div>
+            <div class="cell medium-6">
+                <!-- Description-->
+                <p>This is where the description will go (or some other type of graphic if we decide to put the
+                    description somewhere else).</p>
+            </div>
+        </div>
     </div>
 
-    <!--row one  -->
-    <div class="column row">Row column</div>
-
-    <!-- row two with two columns -->
-
-    <div class="row small-up-2 medium-up-3 large-up-4">
-      <div class="columns large-6"><h1>Travel with friends</h1></div>
-
-      <div class="col"></div>
-    </div>
 
     <!-- Page after search  -->
+    <div style="height:100%;width:100%">
+        <div id="map"></div>
+    </div>
 
     <!-- links for scripts -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-      integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o="
-      crossorigin="anonymous"
-    ></script>
-          <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-      <script async
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXvonNo_xC7LcSCRm9UCA3QXRBhQ8uEoU&callback=initMap&libraries=places">
-      </script>
-      <script src="placesToVisit.js"></script>
-      
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXvonNo_xC7LcSCRm9UCA3QXRBhQ8uEoU&callback=initMap&libraries=places">
+        </script>
     <script src="placesToVisit.js"></script>
+
+    <script src="tripAdvisorApi.js"></script>
     <script src="weatherAPI.js"></script>
-  </body>
+</body>
+
 </html>
