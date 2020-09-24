@@ -10,6 +10,15 @@
       crossorigin="anonymous"
     />
     <title>Vacation Planner</title>
+    <style>
+            /* Set the size of the div element that contains the map */
+            #map {
+                height: 400px;
+                /* The height is 400 pixels */
+                width: 100%;
+                /* The width is the width of the web page */
+            }
+        </style>
   </head>
   <body>
     <!-- first page before search -->
@@ -21,6 +30,9 @@
           <li class="menu-text">Vacation Planner</li>
         </ul>
       </div>
+    </div>
+    <div style="height:100%;width:100%">
+<div id="map"></div>
     </div>
 
     <!--row one  -->
@@ -44,6 +56,12 @@
       integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o="
       crossorigin="anonymous"
     ></script>
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+      <script async
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXvonNo_xC7LcSCRm9UCA3QXRBhQ8uEoU&callback=initMap&libraries=places">
+      </script>
+      <script src="placesToVisit.js"></script>
+      
     <script src="placesToVisit.js"></script>
     <script src="weatherAPI.js"></script>
   </body>
