@@ -3,6 +3,11 @@ html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     font-size: 100%; 
+    padding: 10px 10px 10px 10px;
+}
+
+.title-box {
+  padding: 5px 5px 5px 5px;
 }
 .large-6 {
   width: 50%;
@@ -22,9 +27,16 @@ html {
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  padding: 15px 15px 15px 15px;
+}
+.col-one {
+  padding: 10px 10px 10px 10px;
+}
+.col-two {
+  padding: 10px 10px 10px 10px;
 }
 
-.cell {
+/* .cell {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -32,7 +44,8 @@ html {
   min-height: 0px;
   min-width: 0px;
   width: 100%;
-}
+  
+} */
 .cell.auto {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0px;
@@ -53,4 +66,6 @@ html {
     font-size: 1.5rem;
     line-height: 1.4;
     margin-top: 0;
-    margin-bottom: 0.5rem; }
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
