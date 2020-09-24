@@ -18,15 +18,6 @@ $.ajax(settings).done(function (response) {
     }
 });
 
-/*$(".search-button").on("click", function() {
-    var queryURL = "https://www.hotels4.p.rapidapi.com/locations/search?locale=en_US&query=new%20york&x-rapidapi-key=fb518a1229msh5ea7cb98422b2b6p15ba87jsn21c2e26bff8d";
-       var search = $(".search-button").val();
 
-        $.ajax({
-            url: queryURL,
-            method: "GET", 
-        }).then(function (response) {
-            console.log(response)
        
- });  
-});    */    
+    
