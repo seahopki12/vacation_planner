@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
+
+    <link rel="stylesheet" href="./Assests/style.css">
+
     <style>
         /* Set the size of the div element that contains the map */
         #map {
@@ -24,7 +27,12 @@
     <!-- first page before search -->
 
     <!-- navbar and links -->
-    <div class="top-bar">
+
+    <div id="wrap-before-search"></div>
+    <div class="top-bar title-box">
+
+  
+
         <div class="top-bar-left">
             <ul class="dropdown menu" data-dropdown-menu>
                 <li class="menu-text">Vacation Planner</li>
@@ -90,11 +98,18 @@
                 </div>
             </div>
             <div class="grid-x">
-                <div class="cell medium-6">
+
+                <div class="cell medium-6 col-one">
                     <!-- Input Field-->
+                    <h1 class="header-search">Find Your Destination:</h1>
+                    <ul class="menu">
+                        <li><input type="search" placeholder="Search"></li>
+                        <li><button type="button" class="button">Search</button></li>
+                      </ul>
                     <p>This is where the search field and search button will go.</p>
                 </div>
-                <div class="cell medium-6">
+                <div class="cell medium-6 col-two">
+
                     <!-- Description-->
                     <p>This is where the description will go (or some other type of graphic if we decide to put the
                         description somewhere else).</p>
@@ -104,9 +119,73 @@
 
 
         <!-- Page after search  -->
-        <div style="height:100%;width:100%">
-            <div id="map"></div>
+
+        <!-- nav of after search -->
+        <div>
+            <h2>After search result and return using (display & d-none) </h2>
         </div>
+        <div class="top-bar title-box">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="menu-text">Vacation Planner</li>
+                    <li> 
+                        <a class="button success" href="#wrap-before-search">Return Homepage</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- div of picture of CIty and CIty name -->
+        <div class="grid container"> 
+            <h2>Picture of City and City name</h2>
+        </div>
+
+        <div class="grid container grid-style"> 
+            <h2>Response from weather api of 10-day-forecast</h2>
+        </div>
+
+
+        <div class="grid-x">
+
+            <div class="cell medium-6"> 
+                <h2>Hotel Listings response from traveladvisor api</h2>
+            </div>
+
+            <div class="cell medium-6"> 
+                <h2>Attraction listings response from googlemap api</h2>
+                <div style="height:100%;width:100%">
+                    <div id="map"></div>
+                </div>
+            </div>
+
+        </div>
+
+      
+        <!-- end of display apis -->
+
+        <!-- footer -->
+
+        <footer class="social-footer">
+            <div class="social-footer-left">
+                <h3> &copy; Vacation Planner Team</h3>
+              <a href="#"><img class="logo" src="https://placehold.it/150x30"></a>
+            </div>
+            <div class="social-footer-icons">
+              <ul class="menu simple">
+                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </footer>
+          
+          
+
+
+
+
 
         <!-- links for scripts -->
 
