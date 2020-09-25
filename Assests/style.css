@@ -1,9 +1,9 @@
 /* from foundation */
 html {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-size: 100%; 
-    padding: 10px 10px 10px 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%;
+  padding: 10px 10px 10px 10px;
 }
 
 .title-box {
@@ -17,6 +17,14 @@ html {
   padding-right: 0.9375rem;
   padding-left: 0.9375rem;
 }
+
+.grid-style {
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 .grid-x {
   display: -webkit-box;
   display: -webkit-flex;
@@ -29,8 +37,22 @@ html {
   flex-flow: row wrap;
   padding: 15px 15px 15px 15px;
 }
+.grid-x > .medium-6 {
+  width: 50%;
+}
+
+.grid-margin-x {
+  margin-left: -0.625rem;
+  margin-right: -0.625rem;
+}
+
 .col-one {
-  padding: 10px 10px 10px 10px;
+  border: 1px solid black;
+  background-color: lightblue;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
 }
 .col-two {
   padding: 10px 10px 10px 10px;
@@ -53,19 +75,58 @@ html {
   flex: 1 1 0px;
 }
 .medium-6 {
-    width: 50%; 
-    -webkit-flex-basis: auto;
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto; }
+  width: 50%;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
 
 .bourder-color {
-    background-color: aquamarine;
+  background-color: aquamarine;
 }
 
 .header-search {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
+
+.return-button {
+  border-color: #fefefe transparent transparent;
+  top: 0.4em;
+  display: inline-block;
+  margin-left: 1em;
+  float: right;
+}
+
+
+.social-footer {
+  padding: 1rem;
+  background: #8a8a8a;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-footer .social-footer-icons li:last-of-type {
+  margin-right: 0;
+}
+
+.social-footer .social-footer-icons .fa {
+  font-size: 1.3rem;
+  color: #fefefe;
+}
+
+.social-footer .social-footer-icons .fa:hover {
+  color: #4a4a4a;
+  transition: color 0.3s ease-in;
+}
+
