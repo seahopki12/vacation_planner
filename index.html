@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="./Assests/style.css">
 
     <style>
@@ -107,20 +107,21 @@
                     <!-- Input Field-->
                     <h1 class="header-search">Find Your Destination:</h1>
                     <ul class="menu">
+                        <!-- <p>This is where the search field and search button will go.</p> -->
                         <li><input type="search" placeholder="Search" id="inputVal"></li>
                         <li><button type="button" class="button btn">Search</button></li>
                     </ul>
-                    <p>This is where the search field and search button will go.</p>
+                    <!-- <p>This is where the search field and search button will go.</p>
                         <li><input type="search" placeholder="Search"></li>
                         <li><button type="button" class="button">Search</button></li>
-                    </ul>
+                    </ul> -->
                     <!-- <p>This is where the search field and search button will go.</p> -->
                 </div>
                 <div class="cell medium-6 col-two">
 
                     <!-- Description-->
-                    <p>This is where the description will go (or some other type of graphic if we decide to put the
-                        description somewhere else).</p>
+                    <p class="description-text">This is where the description will go (or some other type of graphic if we decide to put the
+                        description somewhere else). Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam adipisci vel dolore neque officia autem distinctio, doloribus voluptatibus sed reprehenderit culpa soluta, quibusdam molestias? Voluptatum expedita voluptatibus non ea nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam in cupiditate, suscipit harum, hic quo nam assumenda, ea magni repellendus minima illum ratione temporibus veniam molestias voluptatum voluptatibus eveniet exercitationem.lorm Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem reiciendis numquam atque repellendus possimus molestiae quasi consequuntur, ex nam et vitae nostrum aliquam ut a aliquid soluta error ipsum voluptatibus?</p>
                 </div>
             </div>
         </div>
@@ -140,9 +141,19 @@
 
 
         <div class="grid-x">
-
             <div class="cell medium-6" id="hotels">
-                <h2>Hotel Listings response from traveladvisor api</h2>
+                <div class="hotel-div">
+                    <h2>Hotel Lists:</h2>
+                </div>
+                <div>
+                    <a href="#hotel-link">
+                        <ul class="no-bullet">
+                            <li id="hotel-name">Hotel name</li>
+                            <li id="hotel-image">Hotel image</li>
+                           <span class="star-rating display" style="font-size: 48px; color: orange;" >rating<i class="fas fa-star"></i></span>
+
+                    </a>
+                </div>
             </div>
 
             <div class="cell medium-6" id="mapResponse">
@@ -160,7 +171,7 @@
 
     <!-- footer -->
 
-    <footer class="social-footer">
+    <!-- <footer class="social-footer">
         <div class="social-footer-left">
             <h3> &copy; Vacation Planner Team</h3>
             <a href="#"><img class="logo" src="https://placehold.it/150x30"></a>
@@ -175,9 +186,15 @@
                 <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
             </ul>
         </div>
-    </footer>
+    </footer> -->
 
-
+    <div class="callout" style="text-align: center; background-color: lightskyblue;">
+        <h3 class="fooer-text"> Created By &copy; Vacation Planner Team 2020</h3>
+        <p><a href="#" class="success button">Return Btn</a></p>
+        
+        <h5>Enjoy Your Trip!</h5>
+        
+      </div>
 
 
 
