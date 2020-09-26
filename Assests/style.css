@@ -68,6 +68,7 @@ html {
   width: 100%;
   
 } */
+
 .cell.auto {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0px;
@@ -128,5 +129,15 @@ html {
 .social-footer .social-footer-icons .fa:hover {
   color: #4a4a4a;
   transition: color 0.3s ease-in;
+}
+
+/* Local */
+
+#default {
+  display: block;
+}
+
+#result {
+  display: none;
 }
 
