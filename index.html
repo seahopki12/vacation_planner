@@ -20,7 +20,7 @@
         }
     </style>
     <title>Vacation Planner</title>
-   
+
 </head>
 
 <body>
@@ -31,7 +31,7 @@
     <div id="wrap-before-search"></div>
     <div class="top-bar title-box">
 
-  
+
 
         <div class="top-bar-left">
             <ul class="dropdown menu" data-dropdown-menu>
@@ -58,28 +58,32 @@
                         <ul class="orbit-container">
                             <li class="is-active orbit-slide">
                                 <figure class="orbit-figure">
-                                    <img class="orbit-image" src="https://www.uncovercolorado.com/wp-content/uploads/2020/07/central-city-co-historic-district-1200x600-1.jpg"
+                                    <img class="orbit-image"
+                                        src="https://www.uncovercolorado.com/wp-content/uploads/2020/07/central-city-co-historic-district-1200x600-1.jpg"
                                         alt="Space">
                                     <figcaption class="orbit-caption">Central City, Colorado</figcaption>
                                 </figure>
                             </li>
                             <li class="orbit-slide">
                                 <figure class="orbit-figure">
-                                    <img class="orbit-image" src="https://blog.movaglobes.com/wp-content/uploads/2018/01/Wanderlust-Wednesday-Iceland1200x600.jpg"
+                                    <img class="orbit-image"
+                                        src="https://blog.movaglobes.com/wp-content/uploads/2018/01/Wanderlust-Wednesday-Iceland1200x600.jpg"
                                         alt="Space">
                                     <figcaption class="orbit-caption">Iceland</figcaption>
                                 </figure>
                             </li>
                             <li class="orbit-slide">
                                 <figure class="orbit-figure">
-                                    <img class="orbit-image" src="https://travelsafari.asia/wp-content/uploads/2018/01/Soneva-kiri-Koh-Kood-Thailand-2-1200x600.jpg"
+                                    <img class="orbit-image"
+                                        src="https://travelsafari.asia/wp-content/uploads/2018/01/Soneva-kiri-Koh-Kood-Thailand-2-1200x600.jpg"
                                         alt="Space">
                                     <figcaption class="orbit-caption">Thailand</figcaption>
                                 </figure>
                             </li>
                             <li class="orbit-slide">
                                 <figure class="orbit-figure">
-                                    <img class="orbit-image" src="https://thriftytraveler.com/wp-content/uploads/2019/02/john-o-nolan-614057-unsplash-1-e1549042968611.jpg"
+                                    <img class="orbit-image"
+                                        src="https://thriftytraveler.com/wp-content/uploads/2019/02/john-o-nolan-614057-unsplash-1-e1549042968611.jpg"
                                         alt="Space">
                                     <figcaption class="orbit-caption">Capetown, South Africa</figcaption>
                                 </figure>
@@ -97,15 +101,15 @@
                     </nav>
                 </div>
             </div>
-            <div class="grid-x">
+            <div class="grid-x search-div">
 
                 <div class="cell medium-6 col-one">
                     <!-- Input Field-->
                     <h1 class="header-search">Find Your Destination:</h1>
                     <ul class="menu">
-                        <li><input type="search" placeholder="Search"></li>
-                        <li><button type="button" class="button">Search</button></li>
-                      </ul>
+                        <li><input type="search" placeholder="Search" id="inputVal"></li>
+                        <li><button type="button" class="button btn">Search</button></li>
+                    </ul>
                     <p>This is where the search field and search button will go.</p>
                 </div>
                 <div class="cell medium-6 col-two">
@@ -128,31 +132,31 @@
             <div class="top-bar-left">
                 <ul class="dropdown menu" data-dropdown-menu>
                     <li class="menu-text">Vacation Planner</li>
-                    <li> 
-                        <a class="button success" href="#wrap-before-search">Return Homepage</a>
-                        
+                    <li>
+                        <a class="button btn" href="#wrap-before-search">Return Homepage</a>
+
                     </li>
                 </ul>
             </div>
         </div>
 
         <!-- div of picture of CIty and CIty name -->
-        <div class="grid container"> 
+        <div class="grid container">
             <h2>Picture of City and City name</h2>
         </div>
 
-        <div class="grid container grid-style"> 
+        <div class="grid container grid-style">
             <h2>Response from weather api of 10-day-forecast</h2>
         </div>
 
 
         <div class="grid-x">
 
-            <div class="cell medium-6"> 
+            <div class="cell medium-6">
                 <h2>Hotel Listings response from traveladvisor api</h2>
             </div>
 
-            <div class="cell medium-6"> 
+            <div class="cell medium-6">
                 <h2>Attraction listings response from googlemap api</h2>
                 <div style="height:100%;width:100%">
                     <div id="map"></div>
@@ -161,7 +165,7 @@
 
         </div>
 
-      
+
         <!-- end of display apis -->
 
         <!-- footer -->
@@ -169,19 +173,21 @@
         <footer class="social-footer">
             <div class="social-footer-left">
                 <h3> &copy; Vacation Planner Team</h3>
-              <a href="#"><img class="logo" src="https://placehold.it/150x30"></a>
+                <a href="#"><img class="logo" src="https://placehold.it/150x30"></a>
             </div>
             <div class="social-footer-icons">
-              <ul class="menu simple">
-                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              </ul>
+                <ul class="menu simple">
+                    <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
             </div>
-          </footer>
-          
-          
+        </footer>
+
+
 
 
 
@@ -196,7 +202,7 @@
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <script async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXvonNo_xC7LcSCRm9UCA3QXRBhQ8uEoU&callback=initMap&libraries=places">
-            </script>
+        </script>
         <script src="placesToVisit.js"></script>
 
         <script src="tripAdvisorApi.js"></script>
