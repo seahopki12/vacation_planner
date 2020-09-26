@@ -1,6 +1,42 @@
-var search = $("search-button").val();
+$(document).foundation();
 
-var settings = {
+$(".button").on("click", function () {
+
+    $("#default").hide();
+    $("#result").show();
+
+
+var search = $("#inputVal").val();
+
+/* var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://best-booking-com-hotel.p.rapidapi.com/booking/best-accommodation?cityName=" + search + "&countryName=USA",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "best-booking-com-hotel.p.rapidapi.com",
+		"x-rapidapi-key": "fb518a1229msh5ea7cb98422b2b6p15ba87jsn21c2e26bff8d"
+	}
+}
+
+$.ajax(settings).done(function (response) {
+	
+	var ul = $("<ul />");		
+	
+	console.log(response);
+
+				// $("#hotels").append(response.suggestions[3].entities[i].name);
+			// h2.append(hotelCity);
+			ul.append("<h>" + response.name + "</h>");
+			ul.append("<a>" + response.link + "</a>");
+			ul.append("<p>" + response.rating + "</p>");
+			// $("#hotels").html(hotelCity);
+			$("#hotels").html(ul);
+
+});
+});
+*/
+ var settings = {
 	"async": true,
 	"crossDomain": true,
 	"url": "https://hotels4.p.rapidapi.com/locations/search?locale=en_US&query=" + search + "",
@@ -11,12 +47,30 @@ var settings = {
 	}
 }
 
-$.ajax(settings).done(function (response) {
-    // console.log(response);
-    for (i=0; i < response.suggestions[3].entities.length; i++) {
-    console.log(response.suggestions[3].entities[i].name);
-    }
-});
+	$.ajax(settings).done(function (response) {
+		
+			var ul = $("<ul />");
+			var hotelHeader = $("<h2 />")
+
+		for (i=0; i < response.suggestions[3].entities.length; i++) {
+			
+			console.log(response);
+			
+			console.log(response.suggestions[3].entities[i].name);
+			
+			// $("#hotels").append(response.suggestions[3].entities[i].name);
+			// h2.append(hotelCity);
+			hotelHeader.append("<h2>" + "Hotel List" + "</h2>");
+			ul.append("<li>" + response.suggestions[3].entities[i].name + "<li>");
+			ul.append("<a>" + response.suggestions[3].entities[i].redirectPage + "</a>");
+			// $("#hotels").html(hotelCity);
+			$("#hotels").html(hotelHeader);
+			$("#hotels").html(ul);
+	
+		};
+	});
+	});
+	
 
 
        
