@@ -42,7 +42,7 @@
 
 
     <!-- outline -->
-    <div class="grid container">
+    <div class="grid container" id="default">
         <div class="grid-x">
             <div class="cell">
 
@@ -111,6 +111,10 @@
                         <li><button type="button" class="button btn">Search</button></li>
                     </ul>
                     <p>This is where the search field and search button will go.</p>
+                        <li><input type="search" placeholder="Search"></li>
+                        <li><button type="button" class="button">Search</button></li>
+                    </ul>
+                    <!-- <p>This is where the search field and search button will go.</p> -->
                 </div>
                 <div class="cell medium-6 col-two">
 
@@ -120,7 +124,9 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <!-- Page after search  -->
 
         <!-- Page after search  -->
 
@@ -146,6 +152,13 @@
         </div>
 
         <div class="grid container grid-style">
+    <!-- div of picture of CIty and CIty name -->
+    <div class="grid-container" id="result">
+        <div class="grid-x" id="resultImage">
+            <h2>Picture of City and City name</h2>
+        </div>
+
+        <div class="grid-x grid-style" id="forecast">
             <h2>Response from weather api of 10-day-forecast</h2>
         </div>
 
@@ -157,6 +170,11 @@
             </div>
 
             <div class="cell medium-6">
+            <div class="cell medium-6" id="hotels">
+                <h2>Hotel Listings response from traveladvisor api</h2>
+            </div>
+
+            <div class="cell medium-6" id="mapResponse">
                 <h2>Attraction listings response from googlemap api</h2>
                 <div style="height:100%;width:100%">
                     <div id="map"></div>
@@ -164,11 +182,12 @@
             </div>
 
         </div>
+    </div>
 
 
         <!-- end of display apis -->
 
-        <!-- footer -->
+    <!-- end of display apis -->
 
         <footer class="social-footer">
             <div class="social-footer-left">
@@ -186,6 +205,24 @@
                 </ul>
             </div>
         </footer>
+    <!-- footer -->
+
+    <footer class="social-footer">
+        <div class="social-footer-left">
+            <h3> &copy; Vacation Planner Team</h3>
+            <a href="#"><img class="logo" src="https://placehold.it/150x30"></a>
+        </div>
+        <div class="social-footer-icons">
+            <ul class="menu simple">
+                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </footer>
 
 
 
@@ -193,7 +230,7 @@
 
 
 
-        <!-- links for scripts -->
+    <!-- links for scripts -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
@@ -204,9 +241,18 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXvonNo_xC7LcSCRm9UCA3QXRBhQ8uEoU&callback=initMap&libraries=places">
         </script>
         <script src="placesToVisit.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXvonNo_xC7LcSCRm9UCA3QXRBhQ8uEoU&callback=initMap&libraries=places">
+        </script>
+    <script src="placesToVisit.js"></script>
 
-        <script src="tripAdvisorApi.js"></script>
-        <script src="weatherAPI.js"></script>
+    <script src="tripAdvisorApi.js"></script>
+    <script src="weatherAPI.js"></script>
 </body>
 
 </html>
