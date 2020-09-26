@@ -5,6 +5,17 @@ html {
   font-size: 100%;
   padding: 10px 10px 10px 10px;
 }
+body{
+  margin: 0;
+  /* background-image: url("../img/bg-cl.jpg"); */
+}
+.search-div{
+  margin: 0%;
+  background-color: #16213e !important;
+}
+.btn{
+  background-color: #ea5455;
+}
 
 .title-box {
   padding: 5px 5px 5px 5px;
