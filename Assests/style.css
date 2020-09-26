@@ -96,7 +96,18 @@ body{
 .bourder-color {
   background-color: aquamarine;
 }
+.footer-text {
+  text-align: center;
+  color: floralwhite;
+  font-size: large;
+}
+.description-text {
+  color: #fefefe;
+}
 
+.star-rating{
+  display: inline;
+}
 .header-search {
   font-size: 1.5rem;
   line-height: 1.4;
