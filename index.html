@@ -30,15 +30,15 @@
 
     <div id="wrap-before-search"></div>
     <div class="top-bar title-box">
-
-
-
         <div class="top-bar-left">
-            <ul class="dropdown menu" data-dropdown-menu>
+            <h1 class="title-text"> Vacation Planner</h1>
+            <!-- <ul class="dropdown menu" data-dropdown-menu>
                 <li class="menu-text">Vacation Planner</li>
-            </ul>
+            </ul> -->
         </div>
     </div>
+
+  
 
 
     <!-- outline -->
@@ -105,10 +105,10 @@
 
                 <div class="cell medium-6 col-one">
                     <!-- Input Field-->
-                    <h1 class="header-search">Find Your Destination:</h1>
-                    <ul class="menu">
+                    <h1 class="header-search">Where do you want to go?</h1>
+                    <ul class="menu input-text">
                         <!-- <p>This is where the search field and search button will go.</p> -->
-                        <li><input type="search" placeholder="Search" id="inputVal"></li>
+                        <li><input type="search" placeholder="Search" id="inputVal">Find your destination here!</li>
                         <li><button type="button" class="button btn">Search</button></li>
                     </ul>
                     <!-- <p>This is where the search field and search button will go.</p>
@@ -120,8 +120,11 @@
                 <div class="cell medium-6 col-two">
 
                     <!-- Description-->
-                    <p class="description-text">This is where the description will go (or some other type of graphic if we decide to put the
-                        description somewhere else). Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam adipisci vel dolore neque officia autem distinctio, doloribus voluptatibus sed reprehenderit culpa soluta, quibusdam molestias? Voluptatum expedita voluptatibus non ea nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam in cupiditate, suscipit harum, hic quo nam assumenda, ea magni repellendus minima illum ratione temporibus veniam molestias voluptatum voluptatibus eveniet exercitationem.lorm Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem reiciendis numquam atque repellendus possimus molestiae quasi consequuntur, ex nam et vitae nostrum aliquam ut a aliquid soluta error ipsum voluptatibus?</p>
+                    <p class="description-text">Welcome to Vacation Planner!  Whether you are looking to take a short day trip or a two week excursion, 
+                        Vacation Planner is here to provide you with a comprehensive trip agenda.  Vacation Planner gives you multiple options 
+                        for deciding on attractions, destinations, and hotel listings.  Enter your destination using our search tool to discover 
+                        the best locations for your chosen location.  Planning and coordinating a memorable vacation can be a daunting task and 
+                        Vacation Planner is here to help.  </p>
                 </div>
             </div>
         </div>
@@ -145,15 +148,34 @@
                 <div class="hotel-div">
                     <h2>Hotel Lists:</h2>
                 </div>
-                <div>
+                   <div>
                     <a href="#hotel-link">
                         <ul class="no-bullet">
                             <li id="hotel-name">Hotel name</li>
                             <li id="hotel-image">Hotel image</li>
-                           <span class="star-rating display" style="font-size: 48px; color: orange;" >rating<i class="fas fa-star"></i></span>
+                           <span class="star-rating display" style="font-size: 20px; color: orange;" >rating<i class="fas fa-star"></i></span>
 
                     </a>
-                </div>
+                  </div>
+                  <div>
+                    <a href="#hotel-link">
+                        <ul class="no-bullet">
+                            <li id="hotel-name">Hotel name</li>
+                            <li id="hotel-image">Hotel image</li>
+                           <span class="star-rating display" style="font-size: 20px; color: orange;" >rating<i class="fas fa-star"></i></span>
+
+                    </a>
+                  </div>
+                  <div>
+                    <a href="#hotel-link">
+                        <ul class="no-bullet">
+                            <li id="hotel-name">Hotel name</li>
+                            <li id="hotel-image">Hotel image</li>
+                           <span class="star-rating display" style="font-size: 20px; color: orange;" >rating<i class="fas fa-star"></i></span>
+
+                    </a>
+                  </div>
+
             </div>
 
             <div class="cell medium-6" id="mapResponse">
@@ -168,33 +190,14 @@
 
 
     <!-- end of display apis -->
-
+        
     <!-- footer -->
 
-    <!-- <footer class="social-footer">
-        <div class="social-footer-left">
-            <h3> &copy; Vacation Planner Team</h3>
-            <a href="#"><img class="logo" src="https://placehold.it/150x30"></a>
-        </div>
-        <div class="social-footer-icons">
-            <ul class="menu simple">
-                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </li>
-                <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                </li>
-                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
-    </footer> -->
-
     <div class="callout" style="text-align: center; background-color: lightskyblue;">
-        <h3 class="fooer-text"> Created By &copy; Vacation Planner Team 2020</h3>
-        <p><a href="#" class="success button">Return Btn</a></p>
-        
-        <h5>Enjoy Your Trip!</h5>
-        
-      </div>
+        <h3 class="footer-text"> Created By &copy; Vacation Planner Team 2020</h3>
+            <p><a href="#" class="success button">Return Btn</a></p>
+        <h5 class="footer-text">Enjoy Your Trip!</h5>
+    </div>
 
 
 
@@ -211,6 +214,7 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXvonNo_xC7LcSCRm9UCA3QXRBhQ8uEoU&callback=initMap&libraries=places">
         </script>
     <script src="photos.js"></script>
+    <script src="app.js"></script>
     <script src="placesToVisit.js"></script>
     <script src="tripAdvisorApi.js"></script>
     <script src="weatherAPI.js"></script>
