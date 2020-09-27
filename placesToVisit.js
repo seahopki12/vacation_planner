@@ -27,11 +27,10 @@ function initMap() {
     infowindow = new google.maps.InfoWindow();
    
     const request = {
-        query: "Museum of Contemporary Art Australia",
+        query: "Boston",
         fields: ["name", "geometry"]
     };
     getPlace(request, -33.867, 151.195)
-   
 }
 
 function getPlace(request, lat, lon){
@@ -40,7 +39,11 @@ function getPlace(request, lat, lon){
      center: new google.maps.LatLng(lat, lon),
      zoom: 15
  });
+
   service = new google.maps.places.PlacesService(map);
+
+  photos(service);
+
   service.findPlaceFromQuery(request, (results, status) => {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
           for (let i = 0; i < results.length; i++) {
