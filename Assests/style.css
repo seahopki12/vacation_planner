@@ -121,9 +121,15 @@ html {
   background-color: lightskyblue;
   
 }
+
 .title-text {
   font-size: 1.5rem;
   font-family: 'Times New Roman', Times, serif;
   color: #fefefe;
   padding-left: 30px;
 }
+
+ul {
+  display: none;
+}
+
