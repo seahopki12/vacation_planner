@@ -9,6 +9,62 @@ body {
 .btn {
   background-color: #ea5455;
 }
+
+
+/* card */
+.card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-bottom: 1rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 0;
+  background: #fefefe;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  overflow: hidden;
+  color: #0a0a0a; }
+  .card > :last-child {
+    margin-bottom: 0; }
+
+.card-divider {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  padding: 1rem;
+  background: #e6e6e6; }
+  .card-divider > :last-child {
+    margin-bottom: 0; }
+
+.card-section {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  padding: 1rem; }
+  .card-section > :last-child {
+    margin-bottom: 0; }
+
+.card-image {
+  min-height: 1px; }
+/* end card */
+
+
 .col-one {
   border: 1px solid black;
   background-color: lightblue;
@@ -27,6 +83,7 @@ body {
   -ms-flex: 1 1 0px;
   flex: 1 1 0px;
 }
+
 #default {
   display: block;
 }
@@ -40,7 +97,6 @@ body {
   font-size: 1.5rem;
   font-family: "Times New Roman", Times, serif;
 }
-
 
 .grid-container {
   padding-right: 0.9375rem;
