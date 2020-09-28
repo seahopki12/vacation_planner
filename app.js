@@ -1,5 +1,7 @@
-// the weather api starts here
 $(document).foundation();
+var name = $("#inputVal").val();
+// the weather api starts here
+
 
 $(".button").on("click", function () {
 
@@ -12,7 +14,7 @@ $(".button").on("click", function () {
 
 
 })
-var name = $("#inputVal").val();
+
 // this function will grab the name of the city searched and then pass it to the open weather API
 function getCityName(name) {
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + name + "&appid=3e0e5c5529a43577f74e6903ca5baa30";
@@ -30,7 +32,7 @@ function getCityName(name) {
 
 // this fucntion is going to create the elements and from the object grabbed from the open weather API
 function getEl(object) {
-    
+
 }
 
 
@@ -64,7 +66,7 @@ let service;
 let infowindow;
 
 
-function initMap(lat,lon) {
+function initMap(lat, lon) {
     let cityLat = lat;
     let cityLon = lon;
 
@@ -87,6 +89,7 @@ function getPlace(request, lat, lon) {
         zoom: 15
     });
     service = new google.maps.places.PlacesService(map);
+    photos(service);
     service.findPlaceFromQuery(request, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             for (let i = 0; i < results.length; i++) {
@@ -94,7 +97,9 @@ function getPlace(request, lat, lon) {
             }
             map.setCenter(results[0].geometry.location);
         }
+
     });
+    
 }
 
 function createMarker(place) {

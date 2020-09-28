@@ -1,9 +1,6 @@
 
 function photos(service) {
 
-  
-
-
   var request = {
     location: map.getCenter(),
     radius: '500',
@@ -13,7 +10,6 @@ function photos(service) {
   var service = new google.maps.places.PlacesService(map);
   service.textSearch(request, callbackCity);
 
-  //
   
   function callbackCity(place, status) {
     var request = {
@@ -31,6 +27,7 @@ function photos(service) {
             console.log(place.photos[0].getUrl());
         //   createMarker(place);
           console.log(place);
+          $("#resultImage").attr("src", place.photos[0].getUrl());
         }
         }
     
