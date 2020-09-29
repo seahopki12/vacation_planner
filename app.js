@@ -1,18 +1,22 @@
 $(document).foundation();
-var name = $("#inputVal").val();
 // the weather api starts here
 
 
-$(".button").on("click", function () {
+$("#searchButton").on("click", function () {
 
     $("#default").hide();
     $("#result").show();
-
+    $("#returnButton").show();
     var cityName = $("#inputVal").val();
 
     getCityName(cityName);
 
 
+})
+
+$("#returnButton").on("click", function() {
+    $("#result").hide();
+    $("#default").show();
 })
 
 // this function will grab the name of the city searched and then pass it to the open weather API

@@ -110,7 +110,7 @@
                     <ul class="menu input-text">
                         <!-- <p>This is where the search field and search button will go.</p> -->
                         <li><input type="search" placeholder="Search" id="inputVal">Find your destination here!</li>
-                        <li><button type="button" class="button btn">Search</button></li>
+                        <li><button type="button" class="button btn" id="searchButton">Search</button></li>
                     </ul>
                     <!-- <p>This is where the search field and search button will go.</p>
                         <li><input type="search" placeholder="Search"></li>
@@ -140,18 +140,21 @@
     <!-- div of picture of City and City name -->
 
 
-        <div class="grid-container full" id="result">
-            <div class="grid-container fluid">
-            <div class="grid-x grid-margin-x" id="resultImage">
-                <h2>Picture of City and City name</h2>
+    <div class="grid-container full" id="result">
+        <div class="grid-container fluid">
+            <div class="grid-x grid-margin-x">
+                <img id="resultImage" src="" alt="result image">
             </div>
+            <h2 id="cityTitle">Picture of City and City name</h2>
 
-        <!-- 10-days-forecast -->
-        
-        <div class="row">
-            <h1 class="10-days-forecast" style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">10 Days Forecast</h1>
-        </div>
-            <div class="grid-x">              
+            <!-- 10-days-forecast -->
+
+            <div class="row">
+                <h1 class="10-days-forecast"
+                    style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">10 Days Forecast
+                </h1>
+            </div>
+            <div class="grid-x">
                 <div class="cell large-auto">One
                     <div class="date-1">Date: </div>
                     <div class="weather-image1">
@@ -252,10 +255,10 @@
                         <p class="humidity-10">Humidity: </p>
                     </div>
                 </div>
-              </div>
-              <!-- end 10 days forecast -->
+            </div>
+            <!-- end 10 days forecast -->
 
-        <!-- from Saman -->
+            <!-- from Saman -->
             <!-- <div class="grid-x grid-margin-x" id="forecast">
             <div class="cell small-4">
                 <h5>temp:</h5>
@@ -301,79 +304,88 @@
 
 
 
-        <!-- hotel lists -->
-        <div class="grid-x">
-            <div class="cell medium-6" id="hotels">
-                <div class="hotel-div">
-                    <h2 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">Hotel Lists:</h2>
+            <!-- hotel lists -->
+            <div class="grid-x">
+                <div class="cell medium-6" id="hotels">
+                    <div class="hotel-div">
+                        <h2 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">Hotel
+                            Lists:</h2>
+                    </div>
+                    <div>
+                        <a href="#hotel-link">
+                            <ul class="no-bullet" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                                <li id="hotel-name">Hotel name</li>
+                                <li id="hotel-image">Hotel image</li>
+                                <span class="star-rating display" style="font-size: 15px; color: orange;">rating<i
+                                        class="fas fa-star"></i></span>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#hotel-link">
+                            <ul class="no-bullet" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                                <li id="hotel-name">Hotel name</li>
+                                <li id="hotel-image">Hotel image</li>
+                                <span class="star-rating display" style="font-size: 15px; color: orange;">rating<i
+                                        class="fas fa-star"></i></span>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#hotel-link">
+                            <ul class="no-bullet" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                                <li id="hotel-name">Hotel name</li>
+                                <li id="hotel-image">Hotel image</li>
+                                <span class="star-rating display" style="font-size: 15px; color: orange;">rating<i
+                                        class="fas fa-star"></i></span>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#hotel-link">
+                            <ul class="no-bullet" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                                <li id="hotel-name">Hotel name</li>
+                                <li id="hotel-image">Hotel image</li>
+                                <span class="star-rating display" style="font-size: 15px; color: orange;">rating<i
+                                        class="fas fa-star"></i></span>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#hotel-link">
+                            <ul class="no-bullet" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                                <li id="hotel-name">Hotel name</li>
+                                <li id="hotel-image">Hotel image</li>
+                                <span class="star-rating display" style="font-size: 15px; color: orange;">rating<i
+                                        class="fas fa-star"></i></span>
+
+                        </a>
+                    </div>
                 </div>
-                <div>
-                    <a href="#hotel-link">
-                        <ul class="no-bullet" style="font-family: Georgia, 'Times New Roman', Times, serif;">
-                            <li id="hotel-name">Hotel name</li>
-                            <li id="hotel-image">Hotel image</li>
-                           <span class="star-rating display" style="font-size: 15px; color: orange;" >rating<i class="fas fa-star"></i></span>
+                <!-- end of hotel lists -->
 
-                    </a>
+                <!-- Attractions and Map -->
+
+                <div class="cell medium-6" id="mapResponse">
+                    <h2 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">Attraction
+                        Lists/Map:</h2>
+                    <div style="height:100%;width:100%">
+                        <div id="map"></div>
+                    </div>
                 </div>
-                <div>
-                    <a href="#hotel-link">
-                        <ul class="no-bullet" style="font-family: Georgia, 'Times New Roman', Times, serif;">
-                            <li id="hotel-name">Hotel name</li>
-                            <li id="hotel-image">Hotel image</li>
-                           <span class="star-rating display" style="font-size: 15px; color: orange;" >rating<i class="fas fa-star"></i></span>
-
-                    </a>
-                </div>
-                <div>
-                    <a href="#hotel-link">
-                        <ul class="no-bullet" style="font-family: Georgia, 'Times New Roman', Times, serif;">
-                            <li id="hotel-name">Hotel name</li>
-                            <li id="hotel-image">Hotel image</li>
-                           <span class="star-rating display" style="font-size: 15px; color: orange;" >rating<i class="fas fa-star"></i></span>
-
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#hotel-link">
-                        <ul class="no-bullet" style="font-family: Georgia, 'Times New Roman', Times, serif;">
-                            <li id="hotel-name">Hotel name</li>
-                            <li id="hotel-image">Hotel image</li>
-                           <span class="star-rating display" style="font-size: 15px; color: orange;" >rating<i class="fas fa-star"></i></span>
-
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#hotel-link">
-                        <ul class="no-bullet" style="font-family: Georgia, 'Times New Roman', Times, serif;">
-                            <li id="hotel-name">Hotel name</li>
-                            <li id="hotel-image">Hotel image</li>
-                           <span class="star-rating display" style="font-size: 15px; color: orange;" >rating<i class="fas fa-star"></i></span>
-
-                    </a>
-                  </div>
             </div>
-            <!-- end of hotel lists -->
+            <!-- end of grid-x  -->
 
-            <!-- Attractions and Map -->
-
-            <div class="cell medium-6" id="mapResponse">
-                <h2 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">Attraction Lists/Map:</h2>
-                <div style="height:100%;width:100%">
-                    <div id="map"></div>
-                </div>
-            </div>
         </div>
-        <!-- end of grid-x  -->
-        
     </div>
+
     <!-- end of after search display apis -->
-        
+
     <!-- footer -->
 
     <div class="callout" style="text-align: center; background-color: lightskyblue;">
         <h3 class="footer-text"> Created By &copy; Vacation Planner Team 2020</h3>
-        <p><a href="#" class="success button">Return Btn</a></p>
+        <button class="success button" id="returnButton">Return</button>
         <h5 class="footer-text">Enjoy Your Trip!</h5>
     </div>
 
@@ -387,14 +399,13 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXvonNo_xC7LcSCRm9UCA3QXRBhQ8uEoU&callback=initMap&libraries=places">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXvonNo_xC7LcSCRm9UCA3QXRBhQ8uEoU&libraries=places">
         </script>
-        <script src="app.js"></script>
     <script src="photos.js"></script>
-    
-    <script src="placesToVisit.js"></script>
-    <script src="tripAdvisorApi.js"></script>
-    <script src="weatherAPI.js"></script>
+    <script src="app.js"></script>
+
+
+   
 </body>
 
 </html>

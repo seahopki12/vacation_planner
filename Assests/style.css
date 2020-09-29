@@ -185,4 +185,16 @@ html {
   padding-left: 30px;
 }
 
+#resultImage {
+  width: 100%;
+}
+
+#returnButton {
+  display: none;
+}
+
+#cityTitle {
+  text-align: center;
+}
+
 
