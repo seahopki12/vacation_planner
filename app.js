@@ -20,7 +20,7 @@ $(".button").on("click", function () {
     var cityName = $("#inputVal").val();
 
     getCityName(cityName);
-
+    getHotels(cityName);
 
 })
 var name = $("#inputVal").val();
@@ -198,25 +198,44 @@ function day8(object) {
 
 
 // the trip advisor functions start here
-var search = $("search-button").val();
 
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://hotels4.p.rapidapi.com/locations/search?locale=en_US&query=" + search + "",
-    "method": "GET",
-    "headers": {
-        "x-rapidapi-host": "hotels4.p.rapidapi.com",
-        "x-rapidapi-key": "fb518a1229msh5ea7cb98422b2b6p15ba87jsn21c2e26bff8d"
-    }
-}
+function getHotels(name) {
 
-$.ajax(settings).done(function (response) {
-    // console.log(response);
-    for (i = 0; i < response.suggestions[3].entities.length; i++) {
-        console.log(response.suggestions[3].entities[i].name);
+
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://hotels4.p.rapidapi.com/locations/search?locale=en_US&query=" + name + "",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "hotels4.p.rapidapi.com",
+            "x-rapidapi-key": "f1093452bamshd6b7a4c4629f40dp18ecedjsn780c4a7d4b40",
+        }
     }
-});
+
+    $.ajax(settings).done(function (response) {
+
+        console.log(response);
+
+        // for (i = 0; i < response.suggestions[3].entities.length; i++) {
+
+        // console.log(response.suggestions[3].entities[i].name);
+
+        $("#hotel-name0").append(response.suggestions[3].entities[0].name);
+        $("#hotel-name1").append(response.suggestions[3].entities[1].name);
+        $("#hotel-name2").append(response.suggestions[3].entities[2].name);
+
+        // h2.append(hotelCity);
+        // hotelHeader.append("<h2>" + "Hotel List" + "</h2>");
+        // ul.append("<li>" + response.suggestions[3].entities[i].name + "<li>");
+        // ul.append("<a>" + response.suggestions[3].entities[i].redirectPage + "</a>");
+        // $("#hotels").html(hotelCity);
+        // $("#hotels").html(hotelHeader);
+        // $("#hotels").html(ul);
+        // }
+
+    });
+};
 
 
 
