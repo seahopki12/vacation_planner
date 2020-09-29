@@ -8,7 +8,8 @@
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Assests/style.css">
 
@@ -36,8 +37,9 @@
             <h1 class="title-text"> <b>Vacation Planner</b></h1>
         </div>
         <div>
-          <a href="https://www.pngguru.com/free-transparent-background-png-clipart-rjtbe"></a>
-                <img src="./img/background.png" alt="nav-bar-picture"  style="display: inline-block;" class="image-background-link">
+            <a href="https://www.pngguru.com/free-transparent-background-png-clipart-rjtbe"></a>
+            <img src="./img/background.png" alt="nav-bar-picture" style="display: inline-block;"
+                class="image-background-link">
             </a>
         </div>
     </div>
@@ -113,7 +115,7 @@
                     <ul class="menu input-text">
                         <!-- <p>This is where the search field and search button will go.</p> -->
                         <li><input type="search" placeholder="Search" id="inputVal">Find your destination here!</li>
-                        <li><button type="button" class="button btn">Search</button></li>
+                        <li><button type="button" class="button btn" id="searchButton">Search</button></li>
                     </ul>
                     <!-- <p>This is where the search field and search button will go.</p>
                         <li><input type="search" placeholder="Search"></li>
@@ -145,9 +147,10 @@
 
     <div class="grid-container full" id="result">
         <div class="grid-container fluid">
-            <div class="grid-x grid-margin-x" id="resultImage">
-                <h2>Picture of City and City name</h2>
+            <div class="grid-x grid-margin-x">
+                <img id="resultImage" src="" alt="result image">
             </div>
+            <h2 id="cityTitle">Picture of City and City name</h2>
 
             <!-- 10-days-forecast -->
 
@@ -243,7 +246,7 @@
 
 
             <!-- hotel lists -->
-            <div class="grid-x">
+            <!-- <div class="grid-x">
                 <div class="cell medium-6" id="hotels">
                     <div class="hotel-div">
                         <h2 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">Hotel
@@ -300,14 +303,14 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- end 10 days forecast -->
 
-            
 
-                <!-- end of hotel lists -->
 
-                <!-- Attractions and Map -->
+            <!-- end of hotel lists -->
+
+            <!-- Attractions and Map -->
 
             <!-- hotel lists -->
             <div class="grid-x">
@@ -363,32 +366,33 @@
             <!-- end of grid-x  -->
 
         </div>
-        <!-- end of after search display apis -->
+    </div>
+    <!-- end of after search display apis -->
 
-        <!-- footer -->
+    <!-- footer -->
 
-        <div class="callout" style="text-align: center; background-color: lightskyblue;">
-            <h3 class="footer-text"> Created By &copy; Vacation Planner Team 2020</h3>
-            <p><a href="#" class="success button">Return Btn</a></p>
-            <h5 class="footer-text">Enjoy Your Trip!</h5>
-        </div>
+    <div class="callout" style="text-align: center; background-color: lightskyblue;">
+        <h3 class="footer-text"> Created By &copy; Vacation Planner Team 2020</h3>
+        <button class="success button" id="returnButton">Home Page</button>
+        <h5 class="footer-text">Enjoy Your Trip!</h5>
+    </div>
 
 
 
-        <!-- links for scripts -->
+    <!-- links for scripts -->
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-            integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        <script async
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXvonNo_xC7LcSCRm9UCA3QXRBhQ8uEoU&libraries=places">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXvonNo_xC7LcSCRm9UCA3QXRBhQ8uEoU&libraries=places">
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        <script src="photos.js"></script>
-        <script src="app.js"></script>
-        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="photos.js"></script>
+    <script src="app.js"></script>
+
 </body>
 
 </html>

@@ -1,5 +1,6 @@
-// the weather api starts here
 $(document).foundation();
+// the weather api starts here
+
 
 var apiKey = "&appid=df40e453f18e8b1150a67320b38cc787";
 // grab dates from moment.js
@@ -16,14 +17,19 @@ $(".button").on("click", function () {
 
     $("#default").hide();
     $("#result").show();
-
+    $("#returnButton").show();
     var cityName = $("#inputVal").val();
 
     getCityName(cityName);
     getHotels(cityName);
 
 })
-var name = $("#inputVal").val();
+
+$("#returnButton").on("click", function() {
+    $("#result").hide();
+    $("#default").show();
+})
+
 // this function will grab the name of the city searched and then pass it to the open weather API
 function getCityName(name) {
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + name + "&appid=3e0e5c5529a43577f74e6903ca5baa30";
@@ -268,6 +274,7 @@ function getPlace(request, lat, lon) {
         zoom: 15
     });
     service = new google.maps.places.PlacesService(map);
+    photos(service);
     service.findPlaceFromQuery(request, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             for (let i = 0; i < results.length; i++) {
@@ -275,7 +282,9 @@ function getPlace(request, lat, lon) {
             }
             map.setCenter(results[0].geometry.location);
         }
+
     });
+    
 }
 
 function createMarker(place) {

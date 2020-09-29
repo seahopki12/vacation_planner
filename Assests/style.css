@@ -84,6 +84,7 @@ body {
   -ms-flex: 1 1 0px;
   flex: 1 1 0px;
 }
+
 #default {
   display: block;
 }
@@ -97,7 +98,6 @@ body {
   font-size: 1.5rem;
   font-family: "Times New Roman", Times, serif;
 }
-
 
 .grid-container {
   padding-right: 0.9375rem;
@@ -206,4 +206,17 @@ html {
     margin-right: .6em;
     height: 60%;
 }
+
+#resultImage {
+  width: 100%;
+}
+
+#returnButton {
+  display: none;
+}
+
+#cityTitle {
+  text-align: center;
+}
+
 
