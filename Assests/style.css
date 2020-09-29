@@ -196,5 +196,14 @@ html {
   text-align: center;
   font-family: 'Secular One', sans-serif;
 }
-
+.future-forecast{
+    background-color: #0396ff;
+    text-align: left;
+    color: white;
+    padding: 1.5em;
+    border-radius: .4em;
+    margin-top: 2px;
+    margin-right: .6em;
+    height: 60%;
+}
 
