@@ -26,9 +26,14 @@ $(".button").on("click", function () {
 
 })
 
-$("#returnButton").on("click", function () {
+$("#returnButton").on("click", function (e) {
     $("#result").hide();
     $("#default").show();
+
+    var element = e.target;
+    if(element.matches("button") === true){
+        $("#inputVal").val("");
+    }
 })
 
 // this function will grab the name of the city searched and then pass it to the open weather API
@@ -252,7 +257,9 @@ function getHotels(name) {
             "x-rapidapi-key": "f1093452bamshd6b7a4c4629f40dp18ecedjsn780c4a7d4b40",
         }
     }
-
+    $("#hotel-name0").empty();
+    $("#hotel-name1").empty();
+    $("#hotel-name2").empty();
     $.ajax(settings).done(function (response) {
         $("#hotel-name0").append(response.suggestions[3].entities[0].name);
         $("#hotel-name1").append(response.suggestions[3].entities[1].name);
