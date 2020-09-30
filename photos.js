@@ -24,11 +24,10 @@ function photos(service) {
 
     function callbackDetails(place, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
-            console.log(place.photos[0].getUrl());
+            // console.log(place.photos[0].getUrl());
         //   createMarker(place);
           console.log(place);
           $("#resultImage").attr("src", place.photos[0].getUrl());
-          $("#cityTitle").text($("#inputVal").val());
         }
         }
     

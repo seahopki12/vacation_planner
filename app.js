@@ -22,10 +22,11 @@ $(".button").on("click", function () {
 
     getCityName(cityName);
     getHotels(cityName);
+    strUpperCase();
 
 })
 
-$("#returnButton").on("click", function() {
+$("#returnButton").on("click", function () {
     $("#result").hide();
     $("#default").show();
 })
@@ -38,8 +39,6 @@ function getCityName(name) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        // console.log(response);
-        // console.log(response.city.coord.lat, response.city.coord.lon)
         initMap(response.city.coord.lat, response.city.coord.lon);
         weatherAPI(response.city.coord.lat, response.city.coord.lon);
     });
@@ -72,135 +71,170 @@ function weatherAPI(lat, lon) {
 // this fucntion is going to create the elements and from the object grabbed from the open weather API
 
 function day1(object) {
-    var date = $(".date-1");
-    date.append(dayOne);
-    var img = $("#image-1");
+    $("#div1").empty();
+    var weatherDiv1 = $("#div1");
+    var date = $("<p>");
+    date.append("Date: " + dayOne);
+    var img = $("<img>");
     var iconSrc = "http://openweathermap.org/img/w/" + object.daily[0].weather[0].icon + ".png";
     img.attr("src", iconSrc);
 
-    var tempEl = $(".temperature-1");
+    var tempEl = $("<p>");
     var tempF = (object.daily[0].temp.day - 273.15) * 1.8 + 32;
-    tempEl.append(tempF.toFixed(0) + "°");
+    tempEl.append("Temperature: " + tempF.toFixed(0) + "°");
 
-    var humEl = $(".humidity-1");
+    var humEl = $("<p>");
     var hum = object.daily[0].humidity;
-    humEl.append(hum + "%")
+    humEl.append("Humdity: " + hum + "%");
+    weatherDiv1.append(date, img, tempEl, humEl);
 }
 
 // day2
 function day2(object) {
-    var date = $(".date-2");
-    date.append(dayTwo);
-    var img = $("#image-2");
+    $("#div2").empty();
+    var weatherDiv2 = $("#div2");
+    var date = $("<p>");
+    date.append("Date: " + dayTwo);
+    var img = $("<img>");
     var iconSrc = "http://openweathermap.org/img/w/" + object.daily[1].weather[0].icon + ".png";
     img.attr("src", iconSrc);
 
-    var tempEl = $(".temperature-2");
+    var tempEl = $("<p>");
     var tempF = (object.daily[1].temp.day - 273.15) * 1.8 + 32;
-    tempEl.append(tempF.toFixed(0) + "°");
+    tempEl.append("Temperature: " + tempF.toFixed(0) + "°");
 
-    var humEl = $(".humidity-2");
+    var humEl = $("<p>");
     var hum = object.daily[1].humidity;
-    humEl.append(hum + "%")
+    humEl.append("Humidity: " + hum + "%");
+    weatherDiv2.append(date, img, tempEl, humEl);
 }
 //day 3
 function day3(object) {
-    var date = $(".date-3");
-    date.append(dayThree);
-    var img = $("#image-3");
+    $("#div3").empty();
+    var weatherDiv3 = $("#div3");
+    var date = $("<p>");
+    date.append("Date: " + dayThree);
+    var img = $("<img>");
     var iconSrc = "http://openweathermap.org/img/w/" + object.daily[2].weather[0].icon + ".png";
     img.attr("src", iconSrc);
 
-    var tempEl = $(".temperature-3");
+    var tempEl = $("<p>");
     var tempF = (object.daily[2].temp.day - 273.15) * 1.8 + 32;
-    tempEl.append(tempF.toFixed(0) + "°");
+    tempEl.append("Temperature: " + tempF.toFixed(0) + "°");
 
-    var humEl = $(".humidity-3");
+    var humEl = $("<p>");
     var hum = object.daily[2].humidity;
-    humEl.append(hum + "%")
+    humEl.append("Humdity: " + hum + "%");
+    weatherDiv3.append(date, img, tempEl, humEl);
 }
 //day4
 function day4(object) {
-    var date = $(".date-4");
-    date.append(dayFour);
-    var img = $("#image-4");
+    $("#div4").empty();
+    var weatherDiv4 = $("#div4");
+    var date = $("<p>");
+    date.append("Date: " + dayFour);
+    var img = $("<img>");
     var iconSrc = "http://openweathermap.org/img/w/" + object.daily[3].weather[0].icon + ".png";
     img.attr("src", iconSrc);
 
-    var tempEl = $(".temperature-4");
+    var tempEl = $("<p>");
     var tempF = (object.daily[3].temp.day - 273.15) * 1.8 + 32;
-    tempEl.append(tempF.toFixed(0) + "°");
+    tempEl.append("Tempearture: " + tempF.toFixed(0) + "°");
 
-    var humEl = $(".humidity-4");
+    var humEl = $("<p>");
     var hum = object.daily[3].humidity;
-    humEl.append(hum + "%")
+    humEl.append("Humidity: " + hum + "%");
+    weatherDiv4.append(date, img, tempEl, humEl)
 }
 //day5
 function day5(object) {
-    var date = $(".date-5");
-    date.append(dayFive);
-    var img = $("#image-5");
+    $("#div5").empty();
+    var weatherDiv5 = $("#div5");
+    var date = $("<p>");
+    date.append("Date: " + dayFive);
+    var img = $("<img>");
     var iconSrc = "http://openweathermap.org/img/w/" + object.daily[4].weather[0].icon + ".png";
     img.attr("src", iconSrc);
 
-    var tempEl = $(".temperature-5");
+    var tempEl = $("<p>");
     var tempF = (object.daily[4].temp.day - 273.15) * 1.8 + 32;
-    tempEl.append(tempF.toFixed(0)) + "°";
+    tempEl.append("Temperature: " + tempF.toFixed(0) + "°");
 
-    var humEl = $(".humidity-5");
+    var humEl = $("<p>");
     var hum = object.daily[4].humidity;
-    humEl.append(hum + "%")
+    humEl.append("Humidity: " + hum + "%");
+    weatherDiv5.append(date, img, tempEl, humEl)
 }
 //day6
 function day6(object) {
-    var date = $(".date-6");
-    date.append(daySix);
-    var img = $("#image-6");
+    $("#div6").empty();
+    var weatherDiv6 = $("#div6");
+    var date = $("<p>");
+    date.append("Date: " + daySix);
+    var img = $("<img>");
     var iconSrc = "http://openweathermap.org/img/w/" + object.daily[5].weather[0].icon + ".png";
     img.attr("src", iconSrc);
 
-    var tempEl = $(".temperature-6");
+    var tempEl = $("<p>");
     var tempF = (object.daily[5].temp.day - 273.15) * 1.8 + 32;
-    tempEl.append(tempF.toFixed(0) + "°");
+    tempEl.append("Temperature: " + tempF.toFixed(0) + "°");
 
-    var humEl = $(".humidity-6");
+    var humEl = $("<p>");
     var hum = object.daily[5].humidity;
-    humEl.append(hum + "%")
+    humEl.append("Humdity: " + hum + "%");
+
+    weatherDiv6.append(date, img, tempEl, humEl);
 }
 //day7
 function day7(object) {
-    var date = $(".date-7");
-    date.append(daySeven);
-    var img = $("#image-7");
+    $("#div7").empty();
+    var weatherDiv7 = $("#div7");
+
+    var date = $("<p>");
+    date.append("Date: " + daySeven);
+    var img = $("<img>");
     var iconSrc = "http://openweathermap.org/img/w/" + object.daily[6].weather[0].icon + ".png";
     img.attr("src", iconSrc);
 
-    var tempEl = $(".temperature-7");
+    var tempEl = $("<p>");
     var tempF = (object.daily[6].temp.day - 273.15) * 1.8 + 32;
-    tempEl.append(tempF.toFixed(0) + "°");
+    tempEl.append("Temperature: " + tempF.toFixed(0) + "°");
 
-    var humEl = $(".humidity-7");
+    var humEl = $("<p>");
     var hum = object.daily[6].humidity;
-    humEl.append(hum + "%")
+    humEl.append("Humidty: " + hum + "%")
+    weatherDiv7.append(date, img, tempEl, humEl);
 }
 //day8
 function day8(object) {
-    var date = $(".date-8");
-    date.append(dayEight);
-    var img = $("#image-8");
+    $("#div8").empty();
+    var weatherDiv8 = $("#div8")
+    var dateEl = $("<p>")
+    dateEl.append("Date: " + dayEight);
+
+    var imageEl = $("<img>")
     var iconSrc = "http://openweathermap.org/img/w/" + object.daily[7].weather[0].icon + ".png";
-    img.attr("src", iconSrc);
+    imageEl.attr("src", iconSrc);
 
-    var tempEl = $(".temperature-8");
+    var tempEl = $("<p>");
     var tempF = (object.daily[7].temp.day - 273.15) * 1.8 + 32;
-    tempEl.append(tempF.toFixed(0) + "°");
+    tempEl.append("Temperature: " + tempF.toFixed(0) + "°");
 
-    var humEl = $(".humidity-8");
+    var humEl = $("<p>");
     var hum = object.daily[7].humidity;
-    humEl.append(hum + "%")
+    humEl.append("Humidity: " + hum + "%")
+
+    weatherDiv8.append(dateEl, imageEl, tempEl, humEl)
 }
 
+// function to always convert the first string of the searched name to upper case 
 
+function strUpperCase() {
+    var name = $("#inputVal").val();
+    var str = name.toLowerCase();
+    var CapStr = str.charAt(0).toUpperCase() + str.slice(1);
+    $("#cityTitle").text(CapStr);
+}
 
 
 // the trip advisor functions start here
@@ -220,42 +254,22 @@ function getHotels(name) {
     }
 
     $.ajax(settings).done(function (response) {
-
-        console.log(response);
-
-        // for (i = 0; i < response.suggestions[3].entities.length; i++) {
-
-        // console.log(response.suggestions[3].entities[i].name);
-
         $("#hotel-name0").append(response.suggestions[3].entities[0].name);
         $("#hotel-name1").append(response.suggestions[3].entities[1].name);
         $("#hotel-name2").append(response.suggestions[3].entities[2].name);
 
-        // h2.append(hotelCity);
-        // hotelHeader.append("<h2>" + "Hotel List" + "</h2>");
-        // ul.append("<li>" + response.suggestions[3].entities[i].name + "<li>");
-        // ul.append("<a>" + response.suggestions[3].entities[i].redirectPage + "</a>");
-        // $("#hotels").html(hotelCity);
-        // $("#hotels").html(hotelHeader);
-        // $("#hotels").html(ul);
-        // }
-
     });
 };
-
-
 
 // the places to visit functions start here
 let map;
 let service;
 let infowindow;
 
-
 function initMap(lat, lon) {
     let cityLat = lat;
     let cityLon = lon;
 
-    // const sydney = new google.maps.LatLng(-33.867, 151.195);
     infowindow = new google.maps.InfoWindow();
 
     const request = {
@@ -284,7 +298,7 @@ function getPlace(request, lat, lon) {
         }
 
     });
-    
+
 }
 
 function createMarker(place) {
