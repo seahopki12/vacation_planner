@@ -26,9 +26,14 @@ $(".button").on("click", function () {
 
 })
 
-$("#returnButton").on("click", function () {
+$("#returnButton").on("click", function (e) {
     $("#result").hide();
     $("#default").show();
+
+    var element = e.target;
+    if(element.matches("button") === true){
+        $("#inputVal").val("");
+    }
 })
 
 // this function will grab the name of the city searched and then pass it to the open weather API
